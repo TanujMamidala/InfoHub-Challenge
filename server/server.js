@@ -174,7 +174,5 @@ app.get('/api/currency', async (req, res) => {
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-app.listen(PORT, () => {
-	console.log(`Server listening on port ${PORT}`);
-	console.log(`Visit http://localhost:${PORT} to check status`);
-});
+// remove app.listen from here and export the app for local start + serverless wrappers
+export default app;
